@@ -65,9 +65,6 @@ with right_col:
         # Fuse survey and emotion results
         fusion_result = fuse(survey_result, emotion_result, survey_weight)
 
-        # Add a short delay before revealing results
-        time.sleep(3)
-
         # Show stress label in big coloured text
         if fusion_result.stress_label == "Low":
             st.success(f"Stress Level: **{fusion_result.stress_label}**")
